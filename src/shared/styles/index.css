@@ -1,3 +1,9 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer utilities {
+  .rendering-speed {
+    text-rendering: optimizeSpeed;
+  }
+}

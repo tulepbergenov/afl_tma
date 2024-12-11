@@ -15,11 +15,5 @@ export default {
       padding: "16px",
     },
   },
-  plugins: [
-    require("@tailwindcss/typography"),
-    require("@tailwindcss/forms"),
-    require("@tailwindcss/aspect-ratio"),
-    require("@tailwindcss/container-queries"),
-    require("tailwindcss-text-rendering"),
-  ],
+  plugins: [],
 };
