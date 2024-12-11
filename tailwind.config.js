@@ -6,6 +6,9 @@ export default {
       fontFamily: {
         "fm-inter": ["Inter", "sans-serif", "system-ui"],
       },
+      colors: {
+        "clr-primary": "#ffd400",
+      },
     },
     container: {
       center: true,
