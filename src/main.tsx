@@ -4,4 +4,6 @@ import { App } from "./App";
 
 tma.ready();
 
+tma.expand();
+
 createRoot(document.getElementById("afl-tma")!).render(<App />);
