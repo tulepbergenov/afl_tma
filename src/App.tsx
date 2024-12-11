@@ -3,6 +3,8 @@ import "@fontsource/inter/400.css";
 import "@fontsource/inter/700.css";
 import tma from "@twa-dev/sdk";
 import { Suspense, useLayoutEffect } from "react";
+import { RouterProvider } from "react-router-dom";
+import { router } from "./app/router";
 import { ErudaDevTools } from "./components";
 import { hapticFeedbackImpactOccurred } from "./shared/libs";
 
@@ -26,33 +28,7 @@ export const App = () => {
   } else {
     return (
       <>
-        <main>
-          <section>
-            <div className="container">
-              <div>
-                <h1>Hello World</h1>
-                <p className="mt-[20px]">
-                  Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                  Eveniet sequi blanditiis quaerat pariatur, deserunt molestias
-                  consectetur iste laborum deleniti, officiis laboriosam
-                  similique consequatur suscipit ut ipsum vero sint eaque eos.
-                </p>
-                <p className="mt-[20px]">
-                  Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                  Eveniet sequi blanditiis quaerat pariatur, deserunt molestias
-                  consectetur iste laborum deleniti, officiis laboriosam
-                  similique consequatur suscipit ut ipsum vero sint eaque eos.
-                </p>
-                <p className="mt-[20px]">
-                  Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                  Eveniet sequi blanditiis quaerat pariatur, deserunt molestias
-                  consectetur iste laborum deleniti, officiis laboriosam
-                  similique consequatur suscipit ut ipsum vero sint eaque eos.
-                </p>
-              </div>
-            </div>
-          </section>
-        </main>
+        <RouterProvider router={router} />
         {import.meta.env.MODE === "development" && (
           <Suspense fallback={null}>
             <ErudaDevTools />
